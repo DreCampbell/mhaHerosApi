@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>MHA Hero Names</h1>
+    <input type="text">
+    <button>Name your Hero</button>
+    <h2 id="quirk">Quirk: </h2>
+    <h2>Add a Hero</h2>
+    <form action="/addHero" method="post">
+        <input type="text" placeholder="Hero Name" name="heroName">
+        <input type="text" placeholder="Quirk" name="quirk">
+        <button id="getHero">Plus Ultra!</button>
+    </form>
+    <ul>
+        <%for(let i = 0; i < heros.length; i++){%>
+            <li></li>
+        <%}%>
+    </ul>
+    <script src="js/main.js"></script>
+</body>
+</html>
