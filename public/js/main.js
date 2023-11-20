@@ -17,7 +17,9 @@ async function apiRequest(){
         const data = await response.json()
 
         console.log(data)
-        // document.querySelector('h2').innerText = data.birthName
+        document.getElementById('name').innerText = `Hero Name: ${data.heroName}`
+        document.getElementById('rank').innerText = `Rank: ${data.rank}`
+        document.getElementById('quirk').innerText = `Quirk: ${data.quirk}`
     }catch(error){
         console.log(error)
     }
