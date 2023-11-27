@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>MHA Hero Names</h1>
-    <input type="text">
+    <!-- <input type="text">
     <button>Name your Hero</button>
-    <h2 id="quirk">Quirk: </h2>
+    <h2 id="quirk">Quirk: </h2> -->
+    <ul>
+        <% for(let i = 0; i < info.length; i++){ %>
+            <li class="hero">
+                <span><%= info[i].heroName %></span>
+                <span><%= info[i].quirk %></span>
+                <span><%= info[i].likes %></span>
+                <span class="fa fa-thumbs-up"></span>
+                <span class="fa fa-trash"></span>
+            </li>
+        <% } %>
+    </ul>
+
     <h2>Add a Hero</h2>
-    <form action="/addHero" method="post">
+    
+    <form action="/addHero" method="POST">
         <input type="text" placeholder="Hero Name" name="heroName">
         <input type="text" placeholder="Quirk" name="quirk">
-        <button id="getHero">Plus Ultra!</button>
+        <input type="submit">
+        <!-- <button id="getHero">Plus Ultra!</button> -->
     </form>
-    <ul>
-        <%for(let i = 0; i < heros.length; i++){%>
-            <li></li>
-        <%}%>
-    </ul>
     <script src="js/main.js"></script>
 </body>
 </html>
